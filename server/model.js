@@ -5,6 +5,10 @@ const gallerySchema = mongoose.Schema({
     image: {
         type: Array,
         required: true
+    },
+    title:{
+        type: String,
+        required: true
     }
     
 })
