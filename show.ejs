@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery</title>
+  <!-- ... Your head content ... -->
 </head>
 <body>
   <% gallery.forEach(item => { %>
-
-<h4><%= item.title %></h4>
-
     <% item.image.forEach(image => { %>
-      <img src="/show/<%= image %>" alt="<%= item.title %>" style="max-width: 300px; margin: 10px;">
+      <div>
+        <img src="/show/<%= image %>" alt="<%= item.title %>" style="max-width: 300px; margin: 10px;">
+        <a href="/delete/<%= image %>" style="color: red;">Delete</a>
+      </div>
     <% }); %>
   <% }); %>
 </body>
